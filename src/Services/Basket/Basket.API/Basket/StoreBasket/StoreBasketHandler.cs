@@ -13,7 +13,8 @@ public class StoreBasketCommandValidator : AbstractValidator<StoreBasketCommand>
 }
 
 public class StoreBasketCommandHandler
-    (IBasketRepository repository, DiscountProtoService.DiscountProtoServiceClient discountProto)
+    //(IBasketRepository repository, DiscountProtoService.DiscountProtoServiceClient discountProto)
+    (IBasketRepository repository)
     : ICommandHandler<StoreBasketCommand, StoreBasketResult>
 {
     public async Task<StoreBasketResult> Handle(StoreBasketCommand command, CancellationToken cancellationToken)
